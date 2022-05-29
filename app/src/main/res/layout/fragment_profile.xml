@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/profileTextStyle"
+        android:textSize="16sp"
+        android:text="Информация об объекте недвижимости"/>
+
+    <TextView
+        style="@style/profileTextStyle"
+        android:textSize="14sp"
+        android:text="Наименование">
+    </TextView>
+
+    <TextView
+        style="@style/profileTextStyle"
+        android:id="@+id/profileFragment_homeName"
+        android:textSize="16sp">
+    </TextView>
+
+    <TextView
+        style="@style/profileTextStyle"
+        android:text="Адрес"
+        android:textSize="14sp">
+    </TextView>
+
+    <TextView
+        style="@style/profileTextStyle"
+        android:id="@+id/profileFragment_homeAddress"
+        android:textSize="16sp">
+    </TextView>
+
+    <TextView
+        style="@style/profileTextStyle"
+        android:text="Лицевой счет"
+        android:textSize="14sp">
+    </TextView>
+
+    <TextView
+        style="@style/profileTextStyle"
+        android:id="@+id/profileFragment_ELS"
+        android:textSize="16sp">
+    </TextView>
+
+    <TextView
+        style="@style/profileTextStyle"
+        android:text="Владелец"
+        android:textSize="14sp">
+    </TextView>
+
+    <TextView
+        style="@style/profileTextStyle"
+        android:id="@+id/profileFragment_homeOwner"
+        android:textSize="16sp">
+    </TextView>
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav_graph"
+    app:startDestination="@id/counterFragment">
+
+    <fragment
+        android:id="@+id/counterFragment"
+        android:name="com.example.kusovaya.CounterFragment"
+        android:label="Счетчики"
+        tools:layout="@layout/fragment_counter" />
+    <fragment
+        android:id="@+id/rateFragment"
+        android:name="com.example.kusovaya.RateFragment"
+        android:label="Тарифы"
+        tools:layout="@layout/fragment_rate" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.kusovaya.HistoryFragment"
+        android:label="История"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.kusovaya.ProfileFragment"
+        android:label="Профиль"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
