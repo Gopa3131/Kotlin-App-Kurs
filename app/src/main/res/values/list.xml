@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="counter_types">
+        <item>Газ</item>
+        <item>Электричество</item>
+        <item>Холодное водоснабжение</item>
+        <item>Горячее водоснабжение</item>
+    </string-array>
+</resources>

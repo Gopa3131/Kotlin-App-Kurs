@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddCounterActivity"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="10dp">
+
+    <EditText
+        android:id="@+id/addCounterActivity_addName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="наименование счетчика">
+    </EditText>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/purple"
+        android:text="Выберите тип">
+    </TextView>
+
+    <Spinner
+        android:id="@+id/addCounterActivity_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </Spinner>
+
+    <EditText
+        android:id="@+id/addCounterActivity_addPlace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="место установки">
+    </EditText>
+
+    <EditText
+        android:id="@+id/addCounterActivity_addSerNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="серийный номер">
+    </EditText>
+
+    <Button
+        android:id="@+id/addCounterActivity_addCounterButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Добавить счетчик">
+    </Button>
+
+
+
+</android.widget.LinearLayout>
