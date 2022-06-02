@@ -12,17 +12,17 @@
         tools:layout="@layout/fragment_counter" />
     <fragment
         android:id="@+id/rateFragment"
-        android:name="com.example.kusovaya.RateFragment"
+        android:name="com.example.kusovaya.fragments.rates.RateFragment"
         android:label="Тарифы"
         tools:layout="@layout/fragment_rate" />
     <fragment
         android:id="@+id/historyFragment"
-        android:name="com.example.kusovaya.HistoryFragment"
+        android:name="com.example.kusovaya.fragments.history.HistoryFragment"
         android:label="История"
         tools:layout="@layout/fragment_history" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.kusovaya.ProfileFragment"
+        android:name="com.example.kusovaya.fragments.profile.ProfileFragment"
         android:label="Профиль"
         tools:layout="@layout/fragment_profile" />
 </navigation>
