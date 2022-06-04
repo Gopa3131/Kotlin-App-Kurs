@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 @InternalCoroutinesApi
 class CountersViewModel(application: Application) : AndroidViewModel(application) {
 
-    private val readAllCounters: LiveData<List<Counter>>
+    val readAllCounters: LiveData<List<Counter>>
     private val repository : Repository
 
     init {
@@ -20,4 +20,5 @@ class CountersViewModel(application: Application) : AndroidViewModel(application
         repository = Repository(myDao)
         readAllCounters = repository.readAllCounters
     }
+
 }

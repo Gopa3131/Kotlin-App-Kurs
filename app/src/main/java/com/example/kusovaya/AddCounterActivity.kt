@@ -1,5 +1,6 @@
 package com.example.kusovaya
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
@@ -19,6 +20,7 @@ class AddCounterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_counter)
 
+
         viewModel = ViewModelProvider(this).get(AddCounterViewModel::class.java)
 
         val addCounterButton : Button = findViewById(R.id.addCounterActivity_addCounterButton)
@@ -32,6 +34,7 @@ class AddCounterActivity : AppCompatActivity() {
             insertToDatabase()
         }
     }
+
 
     @InternalCoroutinesApi
     private fun insertToDatabase() {
@@ -49,7 +52,10 @@ class AddCounterActivity : AppCompatActivity() {
         if (inputCheck(name, place, serNum)) {
             val counter : Counter = Counter(0, name, counterType, place, serNum)
             viewModel.addCounter(counter)
+
             Toast.makeText(this, "Счетчик добавлен", Toast.LENGTH_LONG).show()
+
+            finish()
         }
         else {
             Toast.makeText(this, "Заполните пустые поля", Toast.LENGTH_LONG).show()
