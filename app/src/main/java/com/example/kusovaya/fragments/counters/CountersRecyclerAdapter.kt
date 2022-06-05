@@ -9,10 +9,12 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
-import com.example.kusovaya.CounterHistory
+import com.example.kusovaya.activities.counterHistory.CounterHistory
 import com.example.kusovaya.R
 import com.example.kusovaya.dataBase.entities.Counter
+import kotlinx.coroutines.InternalCoroutinesApi
 
+@InternalCoroutinesApi
 class CountersRecyclerAdapter(private val context: Context) : RecyclerView.Adapter<CountersRecyclerAdapter.MyViewHolder>() {
 
     private var counterList = emptyList<Counter>()
@@ -35,6 +37,7 @@ class CountersRecyclerAdapter(private val context: Context) : RecyclerView.Adapt
         holder.wholeItem.setOnClickListener {
             val intent : Intent = Intent(context, CounterHistory::class.java)
             intent.putExtra("counterId", currentCounter.id)
+            intent.putExtra("counterType", currentCounter.type)
             context.startActivity(intent)
         }
     }

@@ -13,7 +13,7 @@ data class Counter(
         @PrimaryKey(autoGenerate = true)
         val id: Int,
         val name: String,
-        val type: String,
+        val type: Int,
         val place: String,
         val serialNumber: String,
 

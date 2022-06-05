@@ -5,6 +5,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import com.example.kusovaya.dataBase.entities.ColdWaterRecord
 import com.example.kusovaya.dataBase.entities.Counter
 
 @Dao
@@ -16,4 +17,6 @@ interface MyDao {
     @Query("SELECT * FROM counter_table")
     fun readAllCounters(): LiveData<List<Counter>>
 
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun addColdWaterRecord(coldWaterRecord: ColdWaterRecord)
 }

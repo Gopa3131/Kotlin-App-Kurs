@@ -4,11 +4,12 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.kusovaya.dataBase.entities.ColdWaterRecord
 import com.example.kusovaya.dataBase.entities.Counter
 import kotlinx.coroutines.InternalCoroutinesApi
 import kotlinx.coroutines.internal.synchronized
 
-@Database(entities = [Counter::class], version = 1, exportSchema = false)
+@Database(entities = [Counter::class, ColdWaterRecord::class], version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun getMyDao() : MyDao

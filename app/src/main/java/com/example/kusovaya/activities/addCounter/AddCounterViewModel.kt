@@ -1,4 +1,4 @@
-package com.example.kusovaya
+package com.example.kusovaya.activities.addCounter
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

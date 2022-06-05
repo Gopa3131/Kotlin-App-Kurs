@@ -1,10 +1,11 @@
-package com.example.kusovaya
+package com.example.kusovaya.activities.addCounter
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.*
 import androidx.lifecycle.ViewModelProvider
+import com.example.kusovaya.R
 import com.example.kusovaya.dataBase.entities.Counter
 import kotlinx.coroutines.InternalCoroutinesApi
 
@@ -47,7 +48,15 @@ class AddCounterActivity : AppCompatActivity() {
         val name : String = nameEditText.text.toString()
         val place : String = placeEditText.text.toString()
         val serNum : String = serNumEditText.text.toString()
-        val counterType : String = counterTypeSpinner.selectedItem.toString()
+        //val counterType : String = counterTypeSpinner.selectedItem.toString()
+        val counterType : Int = when (counterTypeSpinner.selectedItem.toString()){
+            "Газ" -> 0
+            "Электричество" -> 1
+            "Холодное водоснабжение" -> 2
+            "Горячее водоснабжение" -> 3
+            else -> {4} // для горячего
+        }
+        println("countertype - $counterType")
 
         if (inputCheck(name, place, serNum)) {
             val counter : Counter = Counter(0, name, counterType, place, serNum)

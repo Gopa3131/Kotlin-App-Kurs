@@ -10,9 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Kusovaya">
         <activity
-            android:name=".CounterHistory"
-            android:exported="false" />
-        <activity android:name=".AddCounterActivity" />
+            android:name=".activities.addRecord.AddRecordActivity"
+            android:exported="false"
+            android:label="Добавить запись"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".activities.counterHistory.CounterHistory"
+            android:exported="false"
+            android:label="История показаний"/>
+        <activity android:name=".activities.addCounter.AddCounterActivity"
+            android:label="Добавить счетчик"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
