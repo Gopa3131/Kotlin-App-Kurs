@@ -1,12 +1,11 @@
 package com.example.kusovaya
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.*
 import androidx.lifecycle.ViewModelProvider
-import com.example.kusovaya.dataBase.Counter
+import com.example.kusovaya.dataBase.entities.Counter
 import kotlinx.coroutines.InternalCoroutinesApi
 
 class AddCounterActivity : AppCompatActivity() {
@@ -15,7 +14,8 @@ class AddCounterActivity : AppCompatActivity() {
     private lateinit var viewModel : AddCounterViewModel
 
 
-    @InternalCoroutinesApi
+
+    @OptIn(InternalCoroutinesApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_counter)

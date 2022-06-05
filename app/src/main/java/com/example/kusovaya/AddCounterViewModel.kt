@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.kusovaya.dataBase.AppDatabase
-import com.example.kusovaya.dataBase.Counter
+import com.example.kusovaya.dataBase.entities.Counter
 import com.example.kusovaya.dataBase.Repository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.InternalCoroutinesApi

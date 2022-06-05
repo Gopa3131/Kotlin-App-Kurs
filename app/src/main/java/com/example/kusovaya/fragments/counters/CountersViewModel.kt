@@ -1,12 +1,12 @@
-package com.example.kusovaya.dataBase
+package com.example.kusovaya.fragments.counters
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.viewModelScope
-import kotlinx.coroutines.Dispatchers
+import com.example.kusovaya.dataBase.AppDatabase
+import com.example.kusovaya.dataBase.entities.Counter
+import com.example.kusovaya.dataBase.Repository
 import kotlinx.coroutines.InternalCoroutinesApi
-import kotlinx.coroutines.launch
 
 //difference between ViewModel and AndroidViewModel is AndroidViewModel can use Application context
 @InternalCoroutinesApi
