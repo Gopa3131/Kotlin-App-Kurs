@@ -11,12 +11,15 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.example.kusovaya.R
 import com.example.kusovaya.dataBase.entities.ColdWaterRecord
+import com.example.kusovaya.dataBase.entities.ElectricityRecord
+import com.example.kusovaya.dataBase.entities.GasRecord
+import com.example.kusovaya.dataBase.entities.HotWaterRecord
 import kotlinx.coroutines.InternalCoroutinesApi
 
 @InternalCoroutinesApi
 class AddRecordActivity : AppCompatActivity() {
 
-    lateinit var viewModel : AddRecordViewModel
+    private lateinit var viewModel : AddRecordViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,16 +39,16 @@ class AddRecordActivity : AppCompatActivity() {
             val indication : String = indicationEdText.text.toString()
             if (inputCheck(indication)){
                 if (counterType == 0){
-
+                    addGasRecord(counterId, indication.toInt())
                 }
                 else if (counterType == 1) {
-
+                    addElectricityRecord(counterId, indication.toInt())
                 }
                 else if (counterType == 2) {
                     addColdWaterRecord(counterId, indication.toInt())
                 }
                 else {
-
+                    addHotWaterRecord(counterId, indication.toInt())
                 }
                 Toast.makeText(this, "Запись добавлена", Toast.LENGTH_SHORT).show()
                 finish()
@@ -59,6 +62,21 @@ class AddRecordActivity : AppCompatActivity() {
     private fun addColdWaterRecord(counterId : Int, indication: Int) {
         val coldWaterRecord: ColdWaterRecord = ColdWaterRecord(0,counterId,indication)
         viewModel.addColdWaterRecord(coldWaterRecord)
+    }
+
+    private fun addHotWaterRecord(counterId : Int, indication: Int) {
+        val hotWaterRecord: HotWaterRecord = HotWaterRecord(0,counterId,indication)
+        viewModel.addHotWaterRecord(hotWaterRecord)
+    }
+
+    private fun addGasRecord(counterId : Int, indication: Int) {
+        val gasRecord: GasRecord = GasRecord(0,counterId,indication)
+        viewModel.addGasRecord(gasRecord)
+    }
+
+    private fun addElectricityRecord(counterId : Int, indication: Int) {
+        val electricityRecord: ElectricityRecord = ElectricityRecord(0,counterId,indication)
+        viewModel.addElectricityRecord(electricityRecord)
     }
 
     private fun inputCheck(indication: String): Boolean {

@@ -1,8 +1,7 @@
 package com.example.kusovaya.dataBase
 
 import androidx.lifecycle.LiveData
-import com.example.kusovaya.dataBase.entities.ColdWaterRecord
-import com.example.kusovaya.dataBase.entities.Counter
+import com.example.kusovaya.dataBase.entities.*
 
 //repository allows to access multiple data sources from one place
 class Repository(private val myDao: MyDao) {
@@ -17,4 +16,19 @@ class Repository(private val myDao: MyDao) {
         myDao.addColdWaterRecord(coldWaterRecord)
     }
 
+    suspend fun addHotWaterRecord(hotWaterRecord: HotWaterRecord){
+        myDao.addHotWaterRecord(hotWaterRecord)
+    }
+
+    suspend fun addGasRecord(gasRecord: GasRecord){
+        myDao.addGasRecord(gasRecord)
+    }
+
+    suspend fun addElectricityRecord(electricityRecord: ElectricityRecord){
+        myDao.addElectricityRecord(electricityRecord)
+    }
+
+    suspend fun readColdWaterRecordsByCounter(counterId: Int) : LiveData<List<ColdWaterRecord>> {
+        return myDao.readColdWaterRecordsByCounter(counterId)
+    }
 }
