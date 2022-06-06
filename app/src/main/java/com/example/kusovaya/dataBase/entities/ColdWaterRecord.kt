@@ -1,5 +1,6 @@
 package com.example.kusovaya.dataBase.entities
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
@@ -12,6 +13,7 @@ import java.sql.Date
 data class ColdWaterRecord (
     @PrimaryKey(autoGenerate = true)
     val id: Int,
+    @ColumnInfo(index = true)
     val counterId:Int,
     //val date: Date,
     val indication: Int

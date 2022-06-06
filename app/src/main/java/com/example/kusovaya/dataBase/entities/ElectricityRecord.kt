@@ -1,5 +1,6 @@
 package com.example.kusovaya.dataBase.entities
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
@@ -11,6 +12,7 @@ import androidx.room.PrimaryKey
 data class ElectricityRecord(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
+    @ColumnInfo(index = true)
     val counterId:Int,
     //val date: Date,
     val indication: Int

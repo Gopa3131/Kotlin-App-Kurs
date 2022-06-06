@@ -43,7 +43,6 @@ class CounterFragment : Fragment() {
 
         viewModel.readAllCounters.observe(viewLifecycleOwner, Observer { counters ->  adapter.setData(counters)})
 
-
         return view
     }
 

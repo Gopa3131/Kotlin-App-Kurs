@@ -28,7 +28,4 @@ class Repository(private val myDao: MyDao) {
         myDao.addElectricityRecord(electricityRecord)
     }
 
-    suspend fun readColdWaterRecordsByCounter(counterId: Int) : LiveData<List<ColdWaterRecord>> {
-        return myDao.readColdWaterRecordsByCounter(counterId)
-    }
 }
