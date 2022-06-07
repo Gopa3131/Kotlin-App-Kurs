@@ -9,7 +9,7 @@ import kotlinx.coroutines.InternalCoroutinesApi
 import kotlinx.coroutines.internal.synchronized
 
 @Database(entities = [Counter::class, ColdWaterRecord::class, HotWaterRecord::class,
-    GasRecord::class, ElectricityRecord::class], version = 1, exportSchema = false)
+    GasRecord::class, ElectricityRecord::class, Rate::class], version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun getMyDao() : MyDao

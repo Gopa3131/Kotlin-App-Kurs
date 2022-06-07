@@ -39,4 +39,10 @@ interface MyDao {
 
     @Query("SELECT * FROM electricity_records_table WHERE counterId = :counterId ")
     fun readElectricityRecordsByCounter(counterId : Int): LiveData<List<ElectricityRecord>>
+
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun addRates(rate: Rate)
+
+    @Query("SELECT * FROM rates ORDER BY id DESC LIMIT 1")
+    fun getRates():Rate
 }

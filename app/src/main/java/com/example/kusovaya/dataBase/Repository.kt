@@ -28,4 +28,12 @@ class Repository(private val myDao: MyDao) {
         myDao.addElectricityRecord(electricityRecord)
     }
 
+    suspend fun addRate(rate: Rate){
+        myDao.addRates(rate)
+    }
+
+    fun getRate(): Rate{
+        return myDao.getRates()
+    }
+
 }

@@ -43,7 +43,7 @@
 
 
     <Button
-        android:id="@+id/addCounterActivity_addRatesBtn"
+        android:id="@+id/addRateActivity_addRatesBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="ок">
