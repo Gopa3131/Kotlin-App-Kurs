@@ -4,10 +4,7 @@ import android.icu.util.Calendar
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
-import android.widget.Button
-import android.widget.DatePicker
-import android.widget.EditText
-import android.widget.Toast
+import android.widget.*
 import androidx.lifecycle.ViewModelProvider
 import com.example.kusovaya.R
 import com.example.kusovaya.dataBase.entities.ColdWaterRecord
@@ -28,27 +25,29 @@ class AddRecordActivity : AppCompatActivity() {
         val counterId = intent.getIntExtra("counterId", 5 )
         val counterType = intent.getIntExtra("counterType", 5)
 
-        val calendar : DatePicker = findViewById(R.id.addRecordActivity_datePicker)
+        val datePicker : DatePicker = findViewById(R.id.addRecordActivity_datePicker)
         val dateEdText : EditText = findViewById(R.id.addRecordActivity_date_edText)
         val indicationEdText : EditText = findViewById(R.id.addRecordActivity_indication_edText)
         val addRecordBtn : Button = findViewById(R.id.addRecordActivity_addRecordButton)
 
-        viewModel = ViewModelProvider(this).get(AddRecordViewModel::class.java)
+        val currentDate : String = datePicker.dayOfMonth.toString() + "." + datePicker.month.toString() + "." + datePicker.year
+        dateEdText.setText(currentDate)
 
+        viewModel = ViewModelProvider(this).get(AddRecordViewModel::class.java)
         addRecordBtn.setOnClickListener {
             val indication : String = indicationEdText.text.toString()
             if (inputCheck(indication)){
                 if (counterType == 0){
-                    addGasRecord(counterId, indication.toInt())
+                    addGasRecord(counterId, currentDate, indication.toInt())
                 }
                 else if (counterType == 1) {
-                    addElectricityRecord(counterId, indication.toInt())
+                    addElectricityRecord(counterId, currentDate, indication.toInt())
                 }
                 else if (counterType == 2) {
-                    addColdWaterRecord(counterId, indication.toInt())
+                    addColdWaterRecord(counterId, currentDate, indication.toInt())
                 }
                 else {
-                    addHotWaterRecord(counterId, indication.toInt())
+                    addHotWaterRecord(counterId, currentDate, indication.toInt())
                 }
                 Toast.makeText(this, "Запись добавлена", Toast.LENGTH_SHORT).show()
                 finish()
@@ -57,25 +56,27 @@ class AddRecordActivity : AppCompatActivity() {
                 Toast.makeText(this, "Заполните пустые поля", Toast.LENGTH_SHORT).show()
             }
         }
+
+
     }
 
-    private fun addColdWaterRecord(counterId : Int, indication: Int) {
-        val coldWaterRecord: ColdWaterRecord = ColdWaterRecord(0,counterId,indication)
+    private fun addColdWaterRecord(counterId : Int, date : String, indication: Int) {
+        val coldWaterRecord: ColdWaterRecord = ColdWaterRecord(0,counterId, date, indication)
         viewModel.addColdWaterRecord(coldWaterRecord)
     }
 
-    private fun addHotWaterRecord(counterId : Int, indication: Int) {
-        val hotWaterRecord: HotWaterRecord = HotWaterRecord(0,counterId,indication)
+    private fun addHotWaterRecord(counterId : Int, date : String, indication: Int) {
+        val hotWaterRecord: HotWaterRecord = HotWaterRecord(0,counterId, date, indication)
         viewModel.addHotWaterRecord(hotWaterRecord)
     }
 
-    private fun addGasRecord(counterId : Int, indication: Int) {
-        val gasRecord: GasRecord = GasRecord(0,counterId,indication)
+    private fun addGasRecord(counterId : Int, date : String, indication: Int) {
+        val gasRecord: GasRecord = GasRecord(0,counterId, date, indication)
         viewModel.addGasRecord(gasRecord)
     }
 
-    private fun addElectricityRecord(counterId : Int, indication: Int) {
-        val electricityRecord: ElectricityRecord = ElectricityRecord(0,counterId,indication)
+    private fun addElectricityRecord(counterId : Int, date : String, indication: Int) {
+        val electricityRecord: ElectricityRecord = ElectricityRecord(0,counterId, date, indication)
         viewModel.addElectricityRecord(electricityRecord)
     }
 

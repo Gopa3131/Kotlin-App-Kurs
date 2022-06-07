@@ -31,12 +31,12 @@ interface MyDao {
     @Query("SELECT * FROM cold_water_records_table WHERE counterId = :counterId")
     fun readColdWaterRecordsByCounter(counterId : Int): LiveData<List<ColdWaterRecord>>
 
-    //@Query("SELECT * FROM hot_water_records_table WHERE counterId = counterId ")
-    //fun readHotWaterRecordsByCounter(counterId : Int): LiveData<List<HotWaterRecord>>
+    @Query("SELECT * FROM hot_water_records_table WHERE counterId = :counterId ")
+    fun readHotWaterRecordsByCounter(counterId : Int): LiveData<List<HotWaterRecord>>
 
-    //@Query("SELECT * FROM gas_records_table WHERE counterId = counterId ")
-    //fun readGasRecordsByCounter(counterId : Int): LiveData<List<GasRecord>>
+    @Query("SELECT * FROM gas_records_table WHERE counterId = :counterId ")
+    fun readGasRecordsByCounter(counterId : Int): LiveData<List<GasRecord>>
 
-    //@Query("SELECT * FROM electricity_records_table WHERE counterId = counterId ")
-    //fun readElectricityRecordsByCounter(counterId : Int): LiveData<List<ElectricityRecord>>
+    @Query("SELECT * FROM electricity_records_table WHERE counterId = :counterId ")
+    fun readElectricityRecordsByCounter(counterId : Int): LiveData<List<ElectricityRecord>>
 }

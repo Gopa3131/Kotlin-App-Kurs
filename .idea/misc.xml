@@ -3,9 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Study/6s/APIs/9/Kusovaya/app/src/main/res/drawable/ic_pen.xml" value="0.1965" />
         <entry key="..\:/Study/6s/APIs/9/Kusovaya/app/src/main/res/layout/activity_add_counter.xml" value="0.31521739130434784" />
+        <entry key="..\:/Study/6s/APIs/9/Kusovaya/app/src/main/res/layout/activity_add_rate.xml" value="0.25" />
         <entry key="..\:/Study/6s/APIs/9/Kusovaya/app/src/main/res/layout/activity_add_record.xml" value="0.36666666666666664" />
         <entry key="..\:/Study/6s/APIs/9/Kusovaya/app/src/main/res/layout/activity_counter_history.xml" value="0.36666666666666664" />
+        <entry key="..\:/Study/6s/APIs/9/Kusovaya/app/src/main/res/layout/activity_fill_profile.xml" value="0.25" />
+        <entry key="..\:/Study/6s/APIs/9/Kusovaya/app/src/main/res/layout/activity_fill_profile2.xml" value="0.36666666666666664" />
         <entry key="..\:/Study/6s/APIs/9/Kusovaya/app/src/main/res/layout/activity_main.xml" value="0.2558876811594203" />
         <entry key="..\:/Study/6s/APIs/9/Kusovaya/app/src/main/res/layout/counter_history_item.xml" value="0.365625" />
         <entry key="..\:/Study/6s/APIs/9/Kusovaya/app/src/main/res/layout/counters_item_layout.xml" value="0.36666666666666664" />
@@ -13,6 +17,10 @@
         <entry key="..\:/Study/6s/APIs/9/Kusovaya/app/src/main/res/layout/fragment_counter_history.xml" value="0.36666666666666664" />
         <entry key="..\:/Study/6s/APIs/9/Kusovaya/app/src/main/res/layout/fragment_profile.xml" value="0.33695652173913043" />
         <entry key="..\:/Study/6s/APIs/9/Kusovaya/app/src/main/res/layout/fragment_rate.xml" value="0.36666666666666664" />
+        <entry key="..\:/Study/6s/APIs/9/Kusovaya/app/src/main/res/menu/actionbar_menu.xml" value="0.18854166666666666" />
+        <entry key="..\:/Study/6s/APIs/9/Kusovaya/app/src/main/res/menu/bottom_menu.xml" value="0.18854166666666666" />
+        <entry key="..\:/Study/6s/APIs/9/Kusovaya/app/src/main/res/menu/profile_actionbar_menu.xml" value="0.365625" />
+        <entry key="..\:/Study/6s/APIs/9/Kusovaya/app/src/main/res/menu/rates_actionbar_menu.xml" value="0.1875" />
       </map>
     </option>
   </component>

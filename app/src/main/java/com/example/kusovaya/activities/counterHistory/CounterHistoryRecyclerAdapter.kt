@@ -31,15 +31,31 @@ class CounterHistoryRecyclerAdapter(private val counterType : Int) : RecyclerVie
         when (counterType) {
             0 -> {
                 holder.recordIndication.text = gasRecords[position].indication.toString()
+                holder.recordDate.text = gasRecords[position].date
+                if (position != 0){
+                    holder.recordDifference.text = (gasRecords[position].indication - gasRecords[position - 1].indication).toString()
+                }
             }
             1 -> {
                 holder.recordIndication.text = electricityRecords[position].indication.toString()
+                holder.recordDate.text = electricityRecords[position].date
+                if (position != 0){
+                    holder.recordDifference.text = (electricityRecords[position].indication - electricityRecords[position - 1].indication).toString()
+                }
             }
             2 -> {
                 holder.recordIndication.text = coldWaterRecords[position].indication.toString()
+                holder.recordDate.text = coldWaterRecords[position].date
+                if (position != 0){
+                    holder.recordDifference.text = (coldWaterRecords[position].indication - coldWaterRecords[position - 1].indication).toString()
+                }
             }
             else -> {
                 holder.recordIndication.text = hotWaterRecords[position].indication.toString()
+                holder.recordDate.text = hotWaterRecords[position].date
+                if (position != 0){
+                    holder.recordDifference.text = (hotWaterRecords[position].indication - hotWaterRecords[position - 1].indication).toString()
+                }
             }
         }
     }
@@ -64,9 +80,33 @@ class CounterHistoryRecyclerAdapter(private val counterType : Int) : RecyclerVie
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    fun setData(records: List<ColdWaterRecord>?) {
+    fun setDataCw(records: List<ColdWaterRecord>?) {
         if (records != null) {
             this.coldWaterRecords = records
+        }
+        notifyDataSetChanged()
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun setDataGas(records: List<GasRecord>?) {
+        if (records != null) {
+            this.gasRecords = records
+        }
+        notifyDataSetChanged()
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun setDataEl(records: List<ElectricityRecord>?) {
+        if (records != null) {
+            this.electricityRecords = records
+        }
+        notifyDataSetChanged()
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun setDataHw(records: List<HotWaterRecord>?) {
+        if (records != null) {
+            this.hotWaterRecords = records
         }
         notifyDataSetChanged()
     }

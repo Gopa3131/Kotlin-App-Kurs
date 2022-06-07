@@ -14,7 +14,7 @@ data class ElectricityRecord(
     val id: Int,
     @ColumnInfo(index = true)
     val counterId:Int,
-    //val date: Date,
+    val date: String,
     val indication: Int
     //val difference : Int
 )

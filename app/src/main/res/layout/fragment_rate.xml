@@ -1,14 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.rates.RateFragment">
+    tools:context=".fragments.rates.RateFragment"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Rate fragment" />
+        style="@style/profileTextStyle"
+        android:textSize="14sp"
+        android:text="Горячее водоснабжение">
+    </TextView>
 
-</FrameLayout>
+    <TextView
+        style="@style/profileTextStyle"
+        android:id="@+id/fragment_rate_hotWaterTxt"
+        android:textSize="16sp">
+    </TextView>
+
+    <TextView
+        style="@style/profileTextStyle"
+        android:text="Холодное водоснабжение"
+        android:textSize="14sp">
+    </TextView>
+
+    <TextView
+        style="@style/profileTextStyle"
+        android:id="@+id/fragment_rate_coldWaterTxt"
+        android:textSize="16sp">
+    </TextView>
+
+    <TextView
+        style="@style/profileTextStyle"
+        android:text="Газ"
+        android:textSize="14sp">
+    </TextView>
+
+    <TextView
+        style="@style/profileTextStyle"
+        android:id="@+id/fragment_rate_gasTxt"
+        android:textSize="16sp">
+    </TextView>
+
+    <TextView
+        style="@style/profileTextStyle"
+        android:text="Электричество"
+        android:textSize="14sp">
+    </TextView>
+
+    <TextView
+        style="@style/profileTextStyle"
+        android:id="@+id/fragment_rate_electricityTxt"
+        android:textSize="16sp">
+    </TextView>
+
+</LinearLayout>

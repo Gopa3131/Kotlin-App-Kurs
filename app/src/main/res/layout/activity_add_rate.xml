@@ -4,50 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".activities.addRate.AddRateActivity"
     android:orientation="vertical"
-    tools:context=".activities.addRecord.AddRecordActivity"
     android:paddingHorizontal="20dp"
     android:paddingVertical="10dp">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="12sp"
-        android:textColor="@color/purple"
-        android:text="Дата снятия показаний">
-    </TextView>
-
-    <DatePicker
-        android:id="@+id/addRecordActivity_datePicker"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone">
-    </DatePicker>
-
     <EditText
-        android:id="@+id/addRecordActivity_date_edText"
+        android:id="@+id/addRateActivity_hotWater"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Дата"
-        android:inputType="date"
-        android:enabled="false">
-    </EditText>
-
-    <EditText
-        android:id="@+id/addRecordActivity_indication_edText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Текущие показания"
+        android:hint="тариф на горячую воду"
         android:inputType="numberDecimal">
     </EditText>
 
-    <Button
-        android:id="@+id/addRecordActivity_addRecordButton"
+    <EditText
+        android:id="@+id/addRateActivity_coldWater"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ок">
+        android:hint="тариф на холодную воду"
+        android:inputType="numberDecimal">
+    </EditText>
+
+    <EditText
+        android:id="@+id/addRateActivity_gas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="тариф на газ"
+        android:inputType="numberDecimal">
+    </EditText>
+
+    <EditText
+        android:id="@+id/addRateActivity_electricity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="тариф на электричество"
+        android:inputType="numberDecimal">
+    </EditText>
+
+
+    <Button
+        android:id="@+id/addCounterActivity_addRatesBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ок">
     </Button>
-
-
 
 </android.widget.LinearLayout>

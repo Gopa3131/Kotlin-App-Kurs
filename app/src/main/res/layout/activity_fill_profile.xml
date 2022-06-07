@@ -4,50 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".activities.fillProfile.FillProfileActivity"
     android:orientation="vertical"
-    tools:context=".activities.addRecord.AddRecordActivity"
     android:paddingHorizontal="20dp"
     android:paddingVertical="10dp">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="12sp"
-        android:textColor="@color/purple"
-        android:text="Дата снятия показаний">
-    </TextView>
-
-    <DatePicker
-        android:id="@+id/addRecordActivity_datePicker"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone">
-    </DatePicker>
-
     <EditText
-        android:id="@+id/addRecordActivity_date_edText"
+        android:id="@+id/fillProfileActivity_estateName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Дата"
-        android:inputType="date"
-        android:enabled="false">
+        android:hint="объект недвижимости">
     </EditText>
 
     <EditText
-        android:id="@+id/addRecordActivity_indication_edText"
+        android:id="@+id/fillProfileActivity_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Текущие показания"
-        android:inputType="numberDecimal">
+        android:hint="адрес">
     </EditText>
+
+    <EditText
+        android:id="@+id/fillProfileActivity_els"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="лицевой счет">
+    </EditText>
+
+    <EditText
+        android:id="@+id/fillProfileActivity_owner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="владелец">
+    </EditText>
+
 
     <Button
-        android:id="@+id/addRecordActivity_addRecordButton"
+        android:id="@+id/fillProfileActivity_okBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ок">
+        android:text="ок">
     </Button>
-
-
 
 </android.widget.LinearLayout>

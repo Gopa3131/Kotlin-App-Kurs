@@ -33,13 +33,16 @@ class CounterHistory : AppCompatActivity(){
         viewModel = ViewModelProvider(this, viewModelFactory).get(CounterHistoryViewModel::class.java)
         when (counterType) {
             0 -> {
+                viewModel.readGasRecord.observe(this, Observer { records ->  adapter.setDataGas(records)})
             }
             1 -> {
+                viewModel.readElectricityRecord.observe(this, Observer { records ->  adapter.setDataEl(records)})
             }
             2 -> {
-                viewModel.readColdWaterRecord.observe(this, Observer { records ->  adapter.setData(records)})
+                viewModel.readColdWaterRecord.observe(this, Observer { records ->  adapter.setDataCw(records)})
             }
             else -> {
+                viewModel.readHotWaterRecord.observe(this, Observer { records ->  adapter.setDataHw(records)})
             }
         }
 

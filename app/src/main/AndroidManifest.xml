@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.kusovaya">
+    package="com.example.kusovaya" >
 
     <application
         android:allowBackup="true"
@@ -8,21 +8,31 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Kusovaya">
+        android:theme="@style/Theme.Kusovaya" >
+        <activity
+            android:name=".activities.fillProfile.FillProfileActivity"
+            android:label="Заполнить профиль"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.addRate.AddRateActivity"
+            android:label="Редактировать тарифы"
+            android:exported="false" />
         <activity
             android:name=".activities.addRecord.AddRecordActivity"
             android:exported="false"
             android:label="Добавить запись"
-            android:windowSoftInputMode="adjustPan"/>
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activities.counterHistory.CounterHistory"
             android:exported="false"
-            android:label="История показаний"/>
-        <activity android:name=".activities.addCounter.AddCounterActivity"
-            android:label="Добавить счетчик"/>
+            android:label="История показаний" />
+        <activity
+            android:name=".activities.addCounter.AddCounterActivity"
+            android:label="Добавить счетчик" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
